@@ -12,6 +12,8 @@ Os dinossauros estão correndo risco de extinção. Nesse jogo, o jogador irá a
 
 ## Diagrama geral das Componentes
 
+![Diagrama componentes](Componentes.png)
+
 ## Componentes
 
 ## Tabuleiro
@@ -47,7 +49,7 @@ Método | Objetivo
 -------| --------
 startGame() | iniciar o jogo posicionando as peças
 endGame()| ver se o dinossauro ainda está vivo, se não estiver, acabar com o jogo
-doOneLoop() | 
+doOneLoop() | vai pra proxima rodada
 
 ## PeçasMovimento
 
