@@ -16,6 +16,8 @@ Os dinossauros estão correndo risco de extinção. Nesse jogo, o jogador irá a
 
 ## Tabuleiro
 
+![Componente Tabuleiro](TabuleiroC.png)
+
 ### Interfaces
 
 Interfaces associadas a esse componente:
@@ -48,6 +50,8 @@ endGame()| ver se o dinossauro ainda está vivo, se não estiver, acabar com o j
 doOneLoop() | 
 
 ## PeçasMovimento
+
+![Componente PeçasMovimento](MoverC.png)
 
 ### Interfaces
 
@@ -90,6 +94,8 @@ getNext () | vê a próxima posição
 
 ## Cenário
 
+![Componente cenário](CenarioC.png)
+
 ### Interfaces 
 
 Interfaces associadas a cenário:
@@ -122,6 +128,8 @@ setObstacle() | muda a condição de obstáculo ou não da casa a partir do par�
 getObstacle() | vê se a casa é um obstáculo  
 
 ## Score
+
+![Componente placar](placarC.png)
 
 ### Interfaces 
 
