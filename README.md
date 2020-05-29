@@ -14,34 +14,66 @@ Os dinossauros estão correndo risco de extinção. Nesse jogo, o jogador irá a
 
 ## Componentes
 
+## Tabuleiro
+
 ### Interfaces
 
 Interfaces associadas a esse componente:
+![Imagem tabuleiro](tabuleiro.png)
 
 Campo | Valor
 ----- | -----
-Classe | `<caminho completo da classe com pacotes>` <br> Exemplo: `pt.c08componentes.s20catalog.s10ds.DataSetComponent`
-Autores | `<nome dos membros que criaram o componente>`
-Objetivo | `<objetivo do componente>`
-Interface | `<interface em Java do componente>`
+Classe | Tabuleiro
+Autores | David e Mariana
+Objetivo | Representar o espaço do jogo
+Interface | ITabuleiro
 ~~~
-public interface ITableProducer {
-  String[] requestAttributes();
-  String[][] requestInstances();
-}
-public interface IDataSource {
-  public String getDataSource();
-  public void setDataSource(String dataSource);
-}
-public interface IDataSet extends ITableProducer, IDataSource {
+public interface ITabuleiro {
+  void endGame();
+  void startGame();
+  void doOneLoop();
 }
 ~~~
 
 ## Detalhamento das Interfaces
 
-### Interface `<nome da interface>`
-`<papel da interface>`.
+### Interface `ITabuleiro`
+Iniciar e relizar movimentos do jogo no tabuleiro até que ele acabe.
 
 Método | Objetivo
 -------| --------
-`<id do método em Java>` | `<objetivo do método e descrição dos parâmetros>`
+startGame() | iniciar o jogo posicionando as peças
+endGame()| ver se o dinossauro ainda está vivo, se não estiver, acabar com o jogo
+doOneLoop() | 
+
+## PeçasMovimento
+
+### Interfaces
+
+Interfaces associadas a esse componente:
+![Imagem tabuleiro](movable(3).png)
+
+Campo | Valor
+----- | -----
+Classe | Tabuleiro
+Autores | David e Mariana
+Objetivo | Representar o espaço do jogo
+Interface | ITabuleiro
+~~~
+public interface ITabuleiro {
+  void endGame();
+  void startGame();
+  void doOneLoop();
+}
+~~~
+
+## Detalhamento das Interfaces
+
+### Interface `ITabuleiro`
+Iniciar e relizar movimentos do jogo no tabuleiro até que ele acabe.
+
+Método | Objetivo
+-------| --------
+startGame() | iniciar o jogo posicionando as peças
+endGame()| ver se o dinossauro ainda está vivo, se não estiver, acabar com o jogo
+doOneLoop() | 
