@@ -19,6 +19,7 @@ Os dinossauros estão correndo risco de extinção. Nesse jogo, o jogador irá a
 ### Interfaces
 
 Interfaces associadas a esse componente:
+
 ![Imagem tabuleiro](tabuleiro.png)
 
 Campo | Valor
@@ -51,29 +52,101 @@ doOneLoop() |
 ### Interfaces
 
 Interfaces associadas a esse componente:
-![Imagem tabuleiro](movable(3).png)
+
+![Imagem tabuleiro](mover.png)
 
 Campo | Valor
 ----- | -----
-Classe | Tabuleiro
+Classe | PMovimento
 Autores | David e Mariana
-Objetivo | Representar o espaço do jogo
-Interface | ITabuleiro
+Objetivo | Mover o dinossauro e o meteoro pelo tabuleiro
+Interface | IMovable
 ~~~
-public interface ITabuleiro {
-  void endGame();
-  void startGame();
-  void doOneLoop();
+public interface IMovable {
+  void move();
+  void turnRight();
+  void turnLeft();
+  int[] getLeft();
+  int[] getRight();
+  int[] getAtual();
+  int[] getNext();
 }
 ~~~
 
 ## Detalhamento das Interfaces
 
-### Interface `ITabuleiro`
-Iniciar e relizar movimentos do jogo no tabuleiro até que ele acabe.
+### Interface `IMovable`
+Relizar movimentos do dinossauro e dos meteoros no jogo.
 
 Método | Objetivo
 -------| --------
-startGame() | iniciar o jogo posicionando as peças
-endGame()| ver se o dinossauro ainda está vivo, se não estiver, acabar com o jogo
-doOneLoop() | 
+move() | movimenta peças
+turnRight()| vai para a direita
+turnLeft() | vai para a esquerda
+getLeft () | vê se a esquerda está livre
+getRight() | vê se a direita está livre
+getAtual () | mostra a posição atual do dinossauro
+getNext () | vê a próxima posição 
+
+## Cenário
+
+### Interfaces 
+
+Interfaces associadas a cenário:
+
+![Imagem cenário](cenario.png)
+
+Campo | Valor
+----- | -----
+Classe | Cenario
+Autores | David e Mariana
+Objetivo | Colocar objetos no tabuleiro
+Interface | ICenario
+~~~
+public interface ICenario {
+  void setVisible(boolean p);
+  void setObstacle(boolean p);
+  boolean getObstacle();
+}
+~~~
+
+## Detalhamento das Interfaces
+
+### Interface `ICenario`
+Colocar objeto/peças que não realizam movimento no tabuleiro.
+
+Método | Objetivo
+-------| --------
+setVisible() | muda a visibilidade da casa, a partir do parâmetro p 
+setObstacle() | muda a condição de obstáculo ou não da casa a partir do parâmetro p
+getObstacle() | vê se a casa é um obstáculo  
+
+## Score
+
+### Interfaces 
+
+Interfaces associadas ao placar:
+
+![Imagem placar](pontos.png)
+
+Campo | Valor
+----- | -----
+Classe | Placar
+Autores | David e Mariana
+Objetivo | Registrar a pontuação do jogador
+Interface | IScore
+~~~
+public interface ICenario {
+  void inncrement();
+}
+~~~
+
+## Detalhamento das Interfaces
+
+### Interface `IScore`
+Alterar a pontuação do jogador.
+
+Método | Objetivo
+-------| --------
+increment() | incrementa a pontuação do jogador  
+
