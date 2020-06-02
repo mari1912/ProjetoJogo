@@ -10,6 +10,9 @@ Os dinossauros estão correndo risco de extinção. Nesse jogo, o jogador irá a
 ## Vídeo do Projeto
 [Link do vídeo](https://www.youtube.com/watch?v=qXy4wn0Sr80)
 
+## Apresentação slide
+[Link apresentação](https://docs.google.com/presentation/d/1z7tYh_-3t55z-gPLHGo0pKrxIzfjaR9ctWesbCXJPjg/edit#slide=id.g86f2d35873_0_0)
+
 ## Diagrama geral das Componentes
 
 ![Diagrama componentes](Componentes.png)
